@@ -6,46 +6,46 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution built with Django, React, and PostgreSQL. Features include real-time inventory, payment integration, and admin dashboard.",
-      tags: ["Django", "React", "PostgreSQL", "Stripe"],
-      github: "#",
-      demo: "#",
+      title: "E-Commerce",
+      description: "Full-stack e-commerce solution built with Python. Features include product management, shopping cart, and order processing.",
+      tags: ["Python", "E-Commerce"],
+      github: "https://github.com/Dharmenthiran/E-Commerce",
+      demo: null,
     },
     {
-      title: "Task Management App",
-      description: "Cross-platform task management application built with Flutter. Includes offline sync, push notifications, and team collaboration features.",
-      tags: ["Flutter", "Firebase", "Dart"],
-      github: "#",
-      demo: "#",
+      title: "Portfolio Website",
+      description: "Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features include dark/light mode, smooth animations, and a fully responsive design showcasing my projects and skills.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Portfolio"],
+      github: "https://github.com/Dharmenthiran/dharmenthiran-portfolio",
+      demo: null,
     },
     {
-      title: "AI Chatbot API",
-      description: "RESTful API service powered by FastAPI and OpenAI. Provides natural language processing and conversation management with rate limiting.",
-      tags: ["FastAPI", "Python", "OpenAI", "Redis"],
-      github: "#",
-      demo: "#",
+      title: "Dashboard",
+      description: "Dashboard application for monitoring and visualizing solar energy data. Built with Python for real-time analytics.",
+      tags: ["Python", "Dashboard", "Data Visualization"],
+      github: "https://github.com/Dharmenthiran/dashboard",
+      demo: null,
     },
     {
-      title: "Real-time Analytics Dashboard",
-      description: "Interactive dashboard for data visualization with real-time updates. Built using React, D3.js, and WebSocket connections.",
-      tags: ["React", "D3.js", "WebSocket", "Node.js"],
-      github: "#",
-      demo: "#",
+      title: "Grocery Shopping",
+      description: "Web application for grocery shopping with user-friendly interface. Built with modern CSS and responsive design.",
+      tags: ["CSS", "Web Development"],
+      github: "https://github.com/Dharmenthiran/Grocery_Shopping",
+      demo: null,
     },
     {
-      title: "Social Media App",
-      description: "Instagram-like social media platform with photo sharing, stories, and messaging. Built with Flutter for mobile and Django for backend.",
-      tags: ["Flutter", "Django", "AWS S3", "PostgreSQL"],
-      github: "#",
-      demo: "#",
+      title: "Flutter Responsive Window",
+      description: "Flutter application demonstrating responsive window management and adaptive UI design for different screen sizes.",
+      tags: ["Flutter", "Dart", "Responsive Design"],
+      github: "https://github.com/Dharmenthiran/FlutterResponsiveWindow",
+      demo: null,
     },
     {
-      title: "Booking System",
-      description: "Hotel and restaurant booking system with calendar integration, payment processing, and automated email confirmations.",
-      tags: ["Django", "Celery", "Stripe", "SendGrid"],
-      github: "#",
-      demo: "#",
+      title: "Serial Communication",
+      description: "Serial communication library and application built with Dart and C++. Enables communication with serial devices and hardware interfaces.",
+      tags: ["Dart", "C++", "Serial Communication"],
+      github: "https://github.com/Dharmenthiran/DartSerialCommunication",
+      demo: null,
     },
   ];
 
@@ -65,17 +65,17 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 md:pb-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4">
             <span className="gradient-text">My Projects</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             A collection of my recent work showcasing full-stack development, mobile apps, and API services
           </p>
         </motion.div>
@@ -113,14 +113,25 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="flex gap-3 mt-4">
-                  <Button variant="outline" size="sm" className="flex-1 border-primary/50 hover:bg-primary/10">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="flex-1 border-primary/50 hover:bg-primary/10"
+                    asChild
+                  >
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                      <Github className="mr-2 h-4 w-4" />
+                      View Code
+                    </a>
                   </Button>
-                  <Button size="sm" className="flex-1 glow-primary">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Demo
-                  </Button>
+                  {project.demo && (
+                    <Button size="sm" className="flex-1 glow-primary" asChild>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </Card>
             </motion.div>

@@ -27,11 +27,11 @@ const Blog = () => {
       category: "Backend",
     },
     {
-      title: "React Best Practices 2024",
-      excerpt: "Modern React patterns, hooks usage, performance optimization, and architectural decisions for scalable applications.",
+      title: "Flask Best Practices 2024",
+      excerpt: "Modern Flask patterns, blueprint architecture, performance optimization, and best practices for building scalable Python web applications.",
       date: "Feb 28, 2024",
       readTime: "7 min read",
-      category: "Frontend",
+      category: "Backend",
     },
     {
       title: "Microservices with Docker",
@@ -65,17 +65,17 @@ const Blog = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 md:pb-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4">
             <span className="gradient-text">Blog & Articles</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Insights, tutorials, and thoughts on software development, best practices, and technology trends
           </p>
         </motion.div>

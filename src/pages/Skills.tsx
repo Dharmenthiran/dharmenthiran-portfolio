@@ -6,64 +6,57 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: Code,
-      title: "Frontend Development",
-      skills: [
-        { name: "React", level: 90 },
-        { name: "Flutter", level: 85 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "TypeScript", level: 85 },
-        { name: "Tailwind CSS", level: 90 },
-      ],
-    },
-    {
-      icon: Database,
       title: "Backend Development",
       skills: [
+        { name: "Python", level: 95 },
+        { name: "Flask", level: 90 },
         { name: "Django", level: 90 },
         { name: "FastAPI", level: 85 },
-        { name: "Node.js", level: 80 },
-        { name: "Python", level: 95 },
-        { name: "REST APIs", level: 90 },
+        { name: "REST API", level: 90 },
       ],
     },
     {
       icon: Smartphone,
-      title: "Mobile Development",
+      title: "Mobile & Desktop",
       skills: [
         { name: "Flutter", level: 85 },
         { name: "Dart", level: 85 },
-        { name: "Firebase", level: 80 },
-        { name: "React Native", level: 75 },
+        { name: "Kivy", level: 80 },
+        { name: "PyQT", level: 75 },
+      ],
+    },
+    {
+      icon: Code,
+      title: "Frontend Development",
+      skills: [
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "Bootstrap", level: 85 },
       ],
     },
     {
       icon: Cloud,
       title: "Databases",
       skills: [
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "Redis", level: 75 },
         { name: "MySQL", level: 85 },
+        { name: "SQLite", level: 80 },
+      ],
+    },
+    {
+      icon: Database,
+      title: "Networking & Communication",
+      skills: [
+        { name: "WebSocket", level: 80 },
+        { name: "TCP/IP", level: 75 },
+        { name: "Serial Comm", level: 85 },
       ],
     },
     {
       icon: Wrench,
-      title: "DevOps & Tools",
+      title: "Tools & Version Control",
       skills: [
         { name: "Git", level: 90 },
-        { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "CI/CD", level: 80 },
-      ],
-    },
-    {
-      icon: Layers,
-      title: "Other Skills",
-      skills: [
-        { name: "Agile/Scrum", level: 85 },
-        { name: "UI/UX Design", level: 75 },
-        { name: "Testing", level: 80 },
-        { name: "GraphQL", level: 70 },
       ],
     },
   ];
@@ -84,17 +77,17 @@ const Skills = () => {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 md:pb-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4">
             <span className="gradient-text">Skills & Expertise</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             A comprehensive overview of my technical skills and proficiency levels
           </p>
         </motion.div>

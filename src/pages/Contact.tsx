@@ -21,48 +21,48 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "dharmenthiran@example.com",
-      link: "mailto:dharmenthiran@example.com",
+      value: "tdharmenthiran@gmail.com",
+      link: "mailto:tdharmenthiran@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 XXXXX XXXXX",
-      link: "tel:+91XXXXXXXXXX",
+      value: "+91 6383402108",
+      link: "tel:+916383402108",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Tamil Nadu, India",
-      link: "#",
+      value: "Coimbatore, Tamil Nadu, India",
+      link: "https://www.google.com/maps?q=10.99975,77.046",
     },
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-24 md:pt-32 pb-20 md:pb-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4">
             <span className="gradient-text">Get In Touch</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Have a project in mind? Let's work together to bring your ideas to life
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="glass p-8">
-              <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
+            <Card className="glass p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Send Me a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
@@ -105,8 +105,8 @@ const Contact = () => {
             transition={{ delay: 0.4 }}
             className="space-y-6"
           >
-            <Card className="glass p-8">
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+            <Card className="glass p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Contact Information</h2>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.a
@@ -131,17 +131,29 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="glass p-8">
-              <h2 className="text-2xl font-bold mb-4">Let's Connect</h2>
+            <Card className="glass p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Let's Connect</h2>
               <p className="text-muted-foreground mb-6">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
-              <div className="flex gap-4">
-                <Button variant="outline" className="flex-1 border-primary/50 hover:bg-primary/10">
-                  LinkedIn
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button 
+                  variant="outline" 
+                  className="flex-1 border-primary/50 hover:bg-primary/10"
+                  asChild
+                >
+                  <a href="https://www.linkedin.com/in/dharmenthiran-t-248173276" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
                 </Button>
-                <Button variant="outline" className="flex-1 border-primary/50 hover:bg-primary/10">
-                  GitHub
+                <Button 
+                  variant="outline" 
+                  className="flex-1 border-primary/50 hover:bg-primary/10"
+                  asChild
+                >
+                  <a href="https://github.com/Dharmenthiran" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
                 </Button>
               </div>
             </Card>
