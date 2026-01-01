@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'dart:ui';
+
+class GlassContainer extends StatelessWidget {
+  final Widget child;
+  final double borderRadius;
+  final double blur;
+  final Color? color;
+  final Border? border;
+  final EdgeInsetsGeometry? padding;
+  final double? width;
+  final double? height;
+
+  const GlassContainer({
+    super.key,
+    required this.child,
+    this.borderRadius = 16.0,
+    this.blur = 20.0,
+    this.color,
+    this.border,
+    this.padding,
+    this.width,
+    this.height,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(borderRadius),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
+        child: Container(
+          width: width,
+          height: height,
+          padding: padding,
+          decoration: BoxDecoration(
+            color: color ?? Theme.of(context).colorScheme.surface.withOpacity(0.6),
+            borderRadius: BorderRadius.circular(borderRadius),
+            border: border ?? Border.all(
+              color: Theme.of(context).colorScheme.outline.withOpacity(0.3),
+            ),
+          ),
+          child: child,
+        ),
+      ),
+    );
+  }
+}
