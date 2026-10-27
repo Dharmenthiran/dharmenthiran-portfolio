@@ -68,7 +68,7 @@ class ProjectsView extends StatelessWidget {
                       crossAxisCount: isDesktop ? 3 : (isTablet ? 2 : 1),
                       crossAxisSpacing: 24,
                       mainAxisSpacing: 24,
-                      mainAxisExtent: 320,
+                      mainAxisExtent: 350,
                     ),
                     itemCount: viewModel.projects.length,
                     itemBuilder: (context, index) {

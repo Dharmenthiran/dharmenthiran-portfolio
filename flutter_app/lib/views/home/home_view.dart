@@ -1,4 +1,7 @@
+import 'dart:convert';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_router/go_router.dart';
@@ -257,11 +260,11 @@ class HomeView extends StatelessWidget {
         ),
       ),
       itemBuilder: (context) => [
-        _buildPopupItem(context, Icons.download_rounded, 'Download', () => _launch("resume.docx")),
+        _buildPopupItem(context, Icons.download_rounded, 'Download', () {
+          _openResume();
+        }),
         _buildPopupItem(context, Icons.visibility_rounded, 'View', () {
-          final origin = Uri.base.origin;
-          final resumeUrl = "$origin/resume.docx";
-          _launch("https://view.officeapps.live.com/op/view.aspx?src=${Uri.encodeComponent(resumeUrl)}");
+          _openResume();
         }),
       ],
     );
@@ -280,10 +283,31 @@ class HomeView extends StatelessWidget {
     );
   }
 
+  Future<Uri> _getResumeUri() async {
+    if (kIsWeb) {
+      return Uri.base.resolve('DharmenthiranResume.pdf');
+    } else {
+      final bytes = await rootBundle.load('assets/DharmenthiranResume.pdf');
+      final base64Str = base64Encode(bytes.buffer.asUint8List());
+      return Uri.parse('data:application/pdf;base64,$base64Str');
+    }
+  }
+
+  void _openResume() async {
+    final uri = await _getResumeUri();
+    _launchUri(uri);
+  }
+
   void _launch(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
+    }
+  }
+
+  void _launchUri(Uri uri) async {
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
   }
 

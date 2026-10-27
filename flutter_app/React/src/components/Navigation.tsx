@@ -30,12 +30,12 @@ const Navigation = () => {
   // ✅ Fixed version: Automatically choose correct viewer
   const getResumeViewerUrl = () => {
     // Absolute URL to your resume
-    const resumeUrl = `${window.location.origin}/resume.docx`;
+    const resumeUrl = `${window.location.origin}/DharmenthiranResume.pdf`;
 
-  // Use Microsoft Office Viewer (works perfectly for .docx)
-  return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(resumeUrl)}`;
+    // Use Microsoft Office Viewer (works perfectly for .docx)
+    return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(resumeUrl)}`;
   };
-  
+
 
   return (
     <motion.nav
@@ -55,11 +55,10 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative transition-colors ${
-                  isActive(item.path)
+                className={`relative transition-colors ${isActive(item.path)
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
-                }`}
+                  }`}
               >
                 {item.name}
                 {isActive(item.path) && (
@@ -80,8 +79,8 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem asChild>
-                  <a 
-                    href="/resume.docx" 
+                  <a
+                    href="/DharmenthiranResume.pdf"
                     download="Dhermenthiran-Software-Developer.docx"
                     className="flex items-center cursor-pointer"
                   >
@@ -90,7 +89,7 @@ const Navigation = () => {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a 
+                  <a
                     href={getResumeViewerUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -126,11 +125,10 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`py-2 px-2 rounded-md transition-colors ${
-                  isActive(item.path) 
-                    ? "text-primary bg-primary/10" 
+                className={`py-2 px-2 rounded-md transition-colors ${isActive(item.path)
+                    ? "text-primary bg-primary/10"
                     : "text-foreground hover:bg-accent/50"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -140,13 +138,13 @@ const Navigation = () => {
               <ThemeToggle />
             </div>
             <div className="flex flex-col gap-2 mt-2">
-              <Button 
-                variant="default" 
+              <Button
+                variant="default"
                 className="w-full glow-primary"
                 asChild
               >
-                <a 
-                  href="/resume.docx" 
+                <a
+                  href="/DharmenthiranResume.pdf"
                   download="Dhermenthiran-Software-Developer.docx"
                   className="flex items-center justify-center"
                 >
@@ -154,12 +152,12 @@ const Navigation = () => {
                   Download Resume
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full border-primary/50 hover:bg-primary/10"
                 asChild
               >
-                <a 
+                <a
                   href={getResumeViewerUrl()}
                   target="_blank"
                   rel="noopener noreferrer"

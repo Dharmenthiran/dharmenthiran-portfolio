@@ -14,18 +14,18 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Home = () => {
   // Get the resume viewer URL
   const getResumeViewerUrl = () => {
-    const resumeUrl = `${window.location.origin}/resume.docx`;
+    const resumeUrl = `${window.location.origin}/DharmenthiranResume.pdf`;
 
-  // Use Microsoft Office Viewer (works perfectly for .docx)
-  return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(resumeUrl)}`;
+    // Use Microsoft Office Viewer (works perfectly for .docx)
+    return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(resumeUrl)}`;
   };
-  
-  
+
+
 
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Hero Background */}
-      <div 
+      <div
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url(${heroBg})`,
@@ -33,7 +33,7 @@ const Home = () => {
           backgroundPosition: 'center',
         }}
       />
-      
+
       <div className="container mx-auto px-4 pt-24 md:pt-32 pb-20 md:pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center min-h-[60vh] md:min-h-[80vh]">
           {/* Left Content */}
@@ -52,11 +52,11 @@ const Home = () => {
               >
                 Hello, I'm
               </motion.p>
-              
+
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="gradient-text">Dharmenthiran T</span>
               </h1>
-              
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -89,7 +89,7 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              
+
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground">
@@ -99,8 +99,8 @@ const Home = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48">
                   <DropdownMenuItem asChild>
-                    <a 
-                      href="/Dhermenthiran-Software-Developer.docx" 
+                    <a
+                      href="/Dhermenthiran-Software-Developer.docx"
                       download="Dhermenthiran-Software-Developer.docx"
                       className="flex items-center cursor-pointer"
                     >
@@ -109,7 +109,7 @@ const Home = () => {
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a 
+                    <a
                       href={getResumeViewerUrl()}
                       target="_blank"
                       rel="noopener noreferrer"

@@ -1,4 +1,7 @@
+import 'dart:convert';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import '../view_models/theme_view_model.dart';
@@ -30,19 +33,28 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
     }
   }
 
+  Future<Uri> _getResumeUri() async {
+    if (kIsWeb) {
+      return Uri.base.resolve('DharmenthiranResume.pdf');
+    } else {
+      // On desktop, load asset bytes and return as a data URI
+      final bytes = await rootBundle.load('assets/DharmenthiranResume.pdf');
+      final base64Str = base64Encode(bytes.buffer.asUint8List());
+      return Uri.parse('data:application/pdf;base64,$base64Str');
+    }
+  }
+
   void _viewResume() async {
-    final origin = Uri.base.origin;
-    final resumeUrl = "$origin/resume.docx";
-    final viewerUrl = "https://view.officeapps.live.com/op/view.aspx?src=${Uri.encodeComponent(resumeUrl)}";
-    if (!await launchUrl(Uri.parse(viewerUrl))) {
+    final uri = await _getResumeUri();
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch resume viewer');
     }
   }
 
   void _downloadResume() async {
-    final url = Uri.parse('resume.docx');
-    if (!await launchUrl(url)) {
-      throw Exception('Could not launch resume.docx');
+    final uri = await _getResumeUri();
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch DharmenthiranResume.pdf');
     }
   }
 
