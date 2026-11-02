@@ -5,6 +5,17 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SkillsViewModel extends ChangeNotifier {
   final List<SkillCategory> categories = [
     SkillCategory(
+      title: "Artificial Intelligence & RAG",
+      icon: FontAwesomeIcons.brain,
+      skills: [
+        Skill(name: "Retrieval-Augmented Gen (RAG)", level: 92),
+        Skill(name: "ChromaDB (Vector DB)", level: 90),
+        Skill(name: "Ollama & Local LLMs", level: 90),
+        Skill(name: "Sentence Transformers", level: 88),
+        Skill(name: "PyMuPDF & Doc Parsing", level: 85),
+      ],
+    ),
+    SkillCategory(
       title: "Backend Development",
       icon: FontAwesomeIcons.code,
       skills: [
@@ -42,6 +53,7 @@ class SkillsViewModel extends ChangeNotifier {
       skills: [
         Skill(name: "MySQL", level: 85),
         Skill(name: "SQLite", level: 80),
+        Skill(name: "ChromaDB", level: 88),
       ],
     ),
     SkillCategory(

@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
+      title: "Document AI Assistant (Local RAG)",
+      description: "Production-grade, 100% locally-hosted Retrieval-Augmented Generation (RAG) system with zero cloud API costs. Ingests PDFs, chunks & embeds with Sentence Transformers into ChromaDB vector store, and generates strictly grounded answers with Ollama LLMs and page-level citations.",
+      tags: ["FastAPI", "Python", "RAG", "ChromaDB", "Sentence Transformers", "Ollama", "PyMuPDF"],
+      github: "https://github.com/Dharmenthiran/AI_Assisted_Document",
+      demo: null,
+    },
+    {
       title: "Ollama AI Chat System",
       description: "Full-stack, 100% locally-hosted AI chat application powered by Ollama and DeepSeek-R1 with a FastAPI streaming backend, SQLite session history, and a modern Flutter client.",
       tags: ["FastAPI", "Python", "Flutter", "Dart", "Ollama", "DeepSeek-R1"],

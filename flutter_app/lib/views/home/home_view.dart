@@ -312,7 +312,7 @@ class HomeView extends StatelessWidget {
   }
 
   Widget _buildTechStack(BuildContext context, bool isDesktop) {
-    const tech = ['Python', 'Flask', 'Django', 'FastAPI', 'Flutter'];
+    const tech = ['Python', 'FastAPI', 'RAG / AI', 'ChromaDB', 'Flutter', 'Django', 'Flask'];
     return Column(
       crossAxisAlignment: isDesktop ? CrossAxisAlignment.start : CrossAxisAlignment.center,
       children: [

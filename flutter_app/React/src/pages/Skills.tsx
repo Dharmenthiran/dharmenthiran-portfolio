@@ -1,9 +1,20 @@
 import { motion } from "framer-motion";
-import { Code, Database, Smartphone, Cloud, Wrench, Layers } from "lucide-react";
+import { Code, Database, Smartphone, Cloud, Wrench, Layers, Brain } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Skills = () => {
   const skillCategories = [
+    {
+      icon: Brain,
+      title: "Artificial Intelligence & RAG",
+      skills: [
+        { name: "Retrieval-Augmented Gen (RAG)", level: 92 },
+        { name: "ChromaDB (Vector DB)", level: 90 },
+        { name: "Ollama & Local LLMs", level: 90 },
+        { name: "Sentence Transformers", level: 88 },
+        { name: "PyMuPDF & Doc Parsing", level: 85 },
+      ],
+    },
     {
       icon: Code,
       title: "Backend Development",
@@ -42,6 +53,7 @@ const Skills = () => {
       skills: [
         { name: "MySQL", level: 85 },
         { name: "SQLite", level: 80 },
+        { name: "ChromaDB", level: 88 },
       ],
     },
     {

@@ -132,7 +132,7 @@ const Home = () => {
             >
               <p className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Tech Stack:</p>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                {['Python', 'Flask', 'Django', 'FastAPI', 'Flutter'].map((tech, index) => (
+                {['Python', 'FastAPI', 'RAG / AI', 'ChromaDB', 'Flutter', 'Django', 'Flask'].map((tech, index) => (
                   <motion.div
                     key={tech}
                     initial={{ opacity: 0, y: 20 }}
