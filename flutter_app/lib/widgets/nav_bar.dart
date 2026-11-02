@@ -35,10 +35,10 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
 
   Future<Uri> _getResumeUri() async {
     if (kIsWeb) {
-      return Uri.base.resolve('DharmenthiranResume.pdf');
+      return Uri.base.resolve('Dharmenthiran%20T.pdf');
     } else {
       // On desktop, load asset bytes and return as a data URI
-      final bytes = await rootBundle.load('assets/DharmenthiranResume.pdf');
+      final bytes = await rootBundle.load('assets/Dharmenthiran T.pdf');
       final base64Str = base64Encode(bytes.buffer.asUint8List());
       return Uri.parse('data:application/pdf;base64,$base64Str');
     }
@@ -54,7 +54,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   void _downloadResume() async {
     final uri = await _getResumeUri();
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      throw Exception('Could not launch DharmenthiranResume.pdf');
+      throw Exception('Could not launch Dharmenthiran T.pdf');
     }
   }
 

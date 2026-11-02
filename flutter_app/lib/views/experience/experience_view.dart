@@ -197,7 +197,7 @@ class ExperienceView extends StatelessWidget {
                             ),
                             const SizedBox(height: 24),
                             ElevatedButton.icon(
-                              onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/dharmenthiran-t-248173276")),
+                              onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/dharmenthiran-t")),
                               icon: const Icon(Icons.link),
                               label: const Text("View Full Profile on LinkedIn"),
                               style: ElevatedButton.styleFrom(

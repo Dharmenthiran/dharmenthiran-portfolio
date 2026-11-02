@@ -14,10 +14,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Home = () => {
   // Get the resume viewer URL
   const getResumeViewerUrl = () => {
-    const resumeUrl = `${window.location.origin}/DharmenthiranResume.pdf`;
-
-    // Use Microsoft Office Viewer (works perfectly for .docx)
-    return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(resumeUrl)}`;
+    return `${window.location.origin}/Dharmenthiran%20T.pdf`;
   };
 
 
@@ -64,15 +61,17 @@ const Home = () => {
                 className="space-y-2 md:space-y-3"
               >
                 <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground">
-                  Full Stack Engineer
+                  Software Developer
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Hi, I'm Dharmenthiran T — a Full Stack Engineer with hands-on experience in building dynamic and scalable applications. I specialize in Python frameworks such as{" "}
-                  <span className="text-primary">Flask</span>,{" "}
-                  <span className="text-secondary">Django</span>, and{" "}
-                  <span className="text-accent">FastAPI</span>, along with{" "}
-                  <span className="text-primary">Flutter</span> and{" "}
-                  <span className="text-secondary">Dart</span> for cross-platform development. I love crafting efficient backend systems and seamless front-end experiences that bring ideas to life. Always eager to learn and explore new technologies in the full-stack ecosystem.
+                  Hi, I'm Dharmenthiran T — a Software Developer with nearly 3 years of experience building cross-platform applications and robust backend services. I specialize in{" "}
+                  <span className="text-primary">Flutter</span> &amp;{" "}
+                  <span className="text-secondary">Dart</span> for multi-platform experiences, paired with{" "}
+                  <span className="text-accent">Python</span> &amp;{" "}
+                  <span className="text-primary">FastAPI</span> for high-performance REST APIs. Experienced in{" "}
+                  <span className="text-secondary">Industrial IoT</span>, real-time communication using{" "}
+                  <span className="text-accent">MQTT</span> &amp;{" "}
+                  <span className="text-primary">WebSockets</span>, Docker pipelines, and scalable database architectures.
                 </p>
               </motion.div>
             </div>
@@ -100,8 +99,8 @@ const Home = () => {
                 <DropdownMenuContent align="end" className="w-48">
                   <DropdownMenuItem asChild>
                     <a
-                      href="/Dhermenthiran-Software-Developer.docx"
-                      download="Dhermenthiran-Software-Developer.docx"
+                      href="/Dharmenthiran%20T.pdf"
+                      download="Dharmenthiran T.pdf"
                       className="flex items-center cursor-pointer"
                     >
                       <Download className="mr-2 h-4 w-4" />
@@ -132,7 +131,19 @@ const Home = () => {
             >
               <p className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">Tech Stack:</p>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                {['Python', 'FastAPI', 'RAG / AI', 'ChromaDB', 'Flutter', 'Django', 'Flask'].map((tech, index) => (
+                {[
+                  'Flutter',
+                  'Dart',
+                  'FastAPI',
+                  'Python',
+                  'Industrial IoT',
+                  'MQTT',
+                  'WebSockets',
+                  'Docker',
+                  'MySQL',
+                  'PostgreSQL',
+                  'RAG / AI',
+                ].map((tech, index) => (
                   <motion.div
                     key={tech}
                     initial={{ opacity: 0, y: 20 }}

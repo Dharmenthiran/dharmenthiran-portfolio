@@ -142,7 +142,7 @@ const Contact = () => {
                   className="flex-1 border-primary/50 hover:bg-primary/10"
                   asChild
                 >
-                  <a href="https://www.linkedin.com/in/dharmenthiran-t-248173276" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/dharmenthiran-t" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                   </a>
                 </Button>

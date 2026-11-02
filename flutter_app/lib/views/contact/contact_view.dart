@@ -145,7 +145,7 @@ class ContactView extends StatelessWidget {
                                         children: [
                                           Expanded(
                                             child: OutlinedButton(
-                                              onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/dharmenthiran-t-248173276")),
+                                              onPressed: () => launchUrl(Uri.parse("https://www.linkedin.com/in/dharmenthiran-t")),
                                               child: const Text("LinkedIn"),
                                             ),
                                           ),

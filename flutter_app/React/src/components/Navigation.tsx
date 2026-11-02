@@ -29,11 +29,7 @@ const Navigation = () => {
 
   // ✅ Fixed version: Automatically choose correct viewer
   const getResumeViewerUrl = () => {
-    // Absolute URL to your resume
-    const resumeUrl = `${window.location.origin}/DharmenthiranResume.pdf`;
-
-    // Use Microsoft Office Viewer (works perfectly for .docx)
-    return `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(resumeUrl)}`;
+    return `${window.location.origin}/Dharmenthiran%20T.pdf`;
   };
 
 
@@ -80,8 +76,8 @@ const Navigation = () => {
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem asChild>
                   <a
-                    href="/DharmenthiranResume.pdf"
-                    download="Dhermenthiran-Software-Developer.docx"
+                    href="/Dharmenthiran%20T.pdf"
+                    download="Dharmenthiran T.pdf"
                     className="flex items-center cursor-pointer"
                   >
                     <Download className="mr-2 h-4 w-4" />
@@ -144,8 +140,8 @@ const Navigation = () => {
                 asChild
               >
                 <a
-                  href="/DharmenthiranResume.pdf"
-                  download="Dhermenthiran-Software-Developer.docx"
+                  href="/Dharmenthiran%20T.pdf"
+                  download="Dharmenthiran T.pdf"
                   className="flex items-center justify-center"
                 >
                   <Download className="mr-2 h-4 w-4" />

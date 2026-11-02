@@ -10,7 +10,7 @@ class SocialLinks extends StatelessWidget {
 
   final List<Map<String, dynamic>> socials = const [
     {'icon': FontAwesomeIcons.github, 'link': 'https://github.com/Dharmenthiran', 'label': 'GitHub'},
-    {'icon': FontAwesomeIcons.linkedinIn, 'link': 'https://www.linkedin.com/in/dharmenthiran-t-248173276', 'label': 'LinkedIn'},
+    {'icon': FontAwesomeIcons.linkedinIn, 'link': 'https://www.linkedin.com/in/dharmenthiran-t', 'label': 'LinkedIn'},
     {'icon': FontAwesomeIcons.twitter, 'link': 'https://twitter.com/dharma22twitter', 'label': 'Twitter'},
     {'icon': FontAwesomeIcons.instagram, 'link': 'https://instagram.com/dharma._4506', 'label': 'Instagram'},
     {'icon': Icons.mail_outline_rounded, 'link': 'mailto:tdharmenthiran@gmail.com', 'label': 'Email'},

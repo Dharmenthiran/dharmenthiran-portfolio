@@ -13,7 +13,7 @@ class ExperienceViewModel extends ChangeNotifier {
           description:
               "Developing and maintaining software solutions using Python frameworks (Flask, Django, FastAPI) and mobile applications with Flutter. Working on full-stack solutions with MySQL and SQLite databases. Building scalable applications and implementing efficient backend systems.",
           technologies: ["Python", "Flask", "Django", "FastAPI", "Flutter", "Dart", "MySQL", "SQLite", "Git"],
-          linkedin: "https://www.linkedin.com/in/dharmenthiran-t-248173276",
+          linkedin: "https://www.linkedin.com/in/dharmenthiran-t",
         ),
       ];
 

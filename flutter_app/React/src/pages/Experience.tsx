@@ -52,7 +52,7 @@ const Experience = () => {
       employmentType: "Full-time",
       description: "Developing and maintaining software solutions using Python frameworks (Flask, Django, FastAPI) and mobile applications with Flutter. Working on full-stack solutions with MySQL and SQLite databases. Building scalable applications and implementing efficient backend systems.",
       technologies: ["Python", "Flask", "Django", "FastAPI", "Flutter", "Dart", "MySQL", "SQLite", "Git"],
-      linkedin: "https://www.linkedin.com/in/dharmenthiran-t-248173276",
+      linkedin: "https://www.linkedin.com/in/dharmenthiran-t",
     },
   ];
 
@@ -85,7 +85,7 @@ const Experience = () => {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             My professional journey and work experience. Check my{" "}
             <a 
-              href="https://www.linkedin.com/in/dharmenthiran-t-248173276" 
+              href="https://www.linkedin.com/in/dharmenthiran-t" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -182,7 +182,7 @@ const Experience = () => {
                 asChild
               >
                 <a 
-                  href="https://www.linkedin.com/in/dharmenthiran-t-248173276" 
+                  href="https://www.linkedin.com/in/dharmenthiran-t" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

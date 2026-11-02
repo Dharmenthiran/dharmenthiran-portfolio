@@ -93,7 +93,7 @@ class HomeView extends StatelessWidget {
                                   const SizedBox(height: 24),
                                   
                                   Text(
-                                    "Full Stack Engineer",
+                                    "Software Developer",
                                     style: TextStyle(
                                       fontSize: isDesktop ? 36 : 24,
                                       fontWeight: FontWeight.w500,
@@ -115,15 +115,21 @@ class HomeView extends StatelessWidget {
                                           fontFamily: 'Inter',
                                         ),
                                         children: [
-                                          const TextSpan(text: "Hi, I'm Dharmenthiran T — a Full Stack Engineer specializing in "),
-                                          _gradientTextSpan(context, "Flask", AppColors.primaryGradient(context)),
-                                          const TextSpan(text: ", "),
-                                          _gradientTextSpan(context, "Django", AppColors.accentGradient(context)),
-                                          const TextSpan(text: ", and "),
-                                          _gradientTextSpan(context, "FastAPI", AppColors.skillProgressGradient(context)),
-                                          const TextSpan(text: ". I craft efficient backend systems and seamless cross-platform experiences with "),
+                                          const TextSpan(text: "Hi, I'm Dharmenthiran T — a Software Developer with nearly 3 years of experience building cross-platform applications and backend services. Specializing in "),
                                           _gradientTextSpan(context, "Flutter", AppColors.primaryGradient(context)),
-                                          const TextSpan(text: ". Always pushing the boundaries of the full-stack ecosystem."),
+                                          const TextSpan(text: " & "),
+                                          _gradientTextSpan(context, "Dart", AppColors.accentGradient(context)),
+                                          const TextSpan(text: " alongside "),
+                                          _gradientTextSpan(context, "Python", AppColors.primaryGradient(context)),
+                                          const TextSpan(text: " & "),
+                                          _gradientTextSpan(context, "FastAPI", AppColors.skillProgressGradient(context)),
+                                          const TextSpan(text: ". Experienced in "),
+                                          _gradientTextSpan(context, "Industrial IoT", AppColors.accentGradient(context)),
+                                          const TextSpan(text: ", real-time communication using "),
+                                          _gradientTextSpan(context, "MQTT", AppColors.primaryGradient(context)),
+                                          const TextSpan(text: " & "),
+                                          _gradientTextSpan(context, "WebSockets", AppColors.skillProgressGradient(context)),
+                                          const TextSpan(text: ", Docker pipelines, and scalable database architectures."),
                                         ],
                                       ),
                                     ),
@@ -285,9 +291,9 @@ class HomeView extends StatelessWidget {
 
   Future<Uri> _getResumeUri() async {
     if (kIsWeb) {
-      return Uri.base.resolve('DharmenthiranResume.pdf');
+      return Uri.base.resolve('Dharmenthiran%20T.pdf');
     } else {
-      final bytes = await rootBundle.load('assets/DharmenthiranResume.pdf');
+      final bytes = await rootBundle.load('assets/Dharmenthiran T.pdf');
       final base64Str = base64Encode(bytes.buffer.asUint8List());
       return Uri.parse('data:application/pdf;base64,$base64Str');
     }
@@ -312,7 +318,19 @@ class HomeView extends StatelessWidget {
   }
 
   Widget _buildTechStack(BuildContext context, bool isDesktop) {
-    const tech = ['Python', 'FastAPI', 'RAG / AI', 'ChromaDB', 'Flutter', 'Django', 'Flask'];
+    const tech = [
+      'Flutter',
+      'Dart',
+      'FastAPI',
+      'Python',
+      'Industrial IoT',
+      'MQTT',
+      'WebSockets',
+      'Docker',
+      'MySQL',
+      'PostgreSQL',
+      'RAG / AI',
+    ];
     return Column(
       crossAxisAlignment: isDesktop ? CrossAxisAlignment.start : CrossAxisAlignment.center,
       children: [
