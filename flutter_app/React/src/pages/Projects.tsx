@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Production-grade, 100% locally-hosted Retrieval-Augmented Generation (RAG) system with zero cloud API costs. Ingests PDFs, chunks & embeds with Sentence Transformers into ChromaDB vector store, and generates strictly grounded answers with Ollama LLMs and page-level citations.",
       tags: ["FastAPI", "Python", "RAG", "ChromaDB", "Sentence Transformers", "Ollama", "PyMuPDF"],
       github: "https://github.com/Dharmenthiran/AI_Assisted_Document",
-      demo: null,
+      demo: "https://doc-ai-assistant-a20da.web.app/",
     },
     {
       title: "Ollama AI Chat System",
@@ -31,7 +31,7 @@ const Projects = () => {
       description: "An interactive English communication learning platform featuring vocabulary modules, grammar lessons, tenses, real-time conversation practice, and 3D animations.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Three.js"],
       github: "https://github.com/Dharmenthiran/fluent-flow.git",
-      demo: "https://speakzen.lovable.app",
+      demo: "https://fluent-flow-ef0e2.web.app/",
     },
     {
       title: "Portfolio Website",
@@ -45,7 +45,7 @@ const Projects = () => {
       description: "A luxury bridal makeup artist web platform built with React, Three.js, and Supabase. Features interactive 3D elements, appointment booking workflows, and client galleries.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Three.js", "Supabase"],
       github: "https://github.com/Dharmenthiran/make_up_artist_website",
-      demo: "https://artbynila-glow.lovable.app/",
+      demo: "https://makeup-artist-portfolio.web.app/",
     },
     {
       title: "E-Commerce",
